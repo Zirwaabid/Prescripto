@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import MyAppointments from './pages/MyAppointments'
 import MyProfile from './pages/MyProfile'
-import Appointment from './Appointment'
+import Appointment from './pages/Appointment'
 import NavBar from './components/NavBar'
 
 const App = () => {

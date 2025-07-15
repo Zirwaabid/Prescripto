@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 @import "tailwindcss";
 
+*{
+   font-family: "Outfit";
+}
 .primary {
    background-color: #5f6fff;
 }

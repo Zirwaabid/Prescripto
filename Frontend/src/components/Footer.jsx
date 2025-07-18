@@ -26,7 +26,7 @@ function Footer() {
                 <div>
                     <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
                     <ul className='flex flex-col gap-2 text-gray-600'>
-                        <li>+92-300-000-890</li>
+                        <li>+92-300-000-000</li>
                         <li>zirwaabid112@gmail.com</li>
                     </ul>
                 </div>

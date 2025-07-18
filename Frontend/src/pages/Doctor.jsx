@@ -25,17 +25,23 @@ const Doctor = () => {
       <p className='text-gray-600'>Browse through the doctors specialist</p>
       <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
         <div className='flex flex-col gap-4 text-sm text-gray-600'>
-          <p className='doctor-speciality'>General Physician</p>
-          <p className='doctor-speciality'>Gynecologist</p>
-          <p className='doctor-speciality'>Dermatologist</p>
-          <p className='doctor-speciality'>Pediatricians</p>
-          <p className='doctor-speciality'>Neurologist</p>
-          <p className='doctor-speciality'>Gastroenterologist</p>
+          <p onClick={() => speciality === 'General Physician' ? navigate('/doctors') : navigate('/doctors/General physician')} className={`doctor-speciality ${speciality === 'General physician' ? "bg-indigo-100 text-black" : ""}`}>General Physician</p>
+
+          <p onClick={() => speciality === 'Gynecologist' ? navigate('/doctors') : navigate('/doctors/Gynecologist')} className={`doctor-speciality ${speciality === 'Gynecologist' ? "bg-indigo-100 text-black" : ""}`}>Gynecologist</p>
+
+          <p onClick={() => speciality === 'Dermatologist' ? navigate('/doctors') : navigate('/doctors/Dermatologist')} className={`doctor-speciality ${speciality === 'Dermatologist' ? "bg-indigo-100 text-black" : ""}`}>Dermatologist</p>
+
+          <p onClick={() => speciality === 'Pediatricians' ? navigate('/doctors') : navigate('/doctors/Pediatricians')} className={`doctor-speciality ${speciality === 'Pediatricians' ? "bg-indigo-100 text-black" : ""}`}>Pediatricians</p>
+
+          <p onClick={() => speciality === 'Neurologist' ? navigate('/doctors') : navigate('/doctors/Neurologist')} className={`doctor-speciality ${speciality === 'Neurologist' ? "bg-indigo-100 text-black" : ""}`}>Neurologist</p>
+
+          <p onClick={() => speciality === 'Gastroenterologist' ? navigate('/doctors') : navigate('/doctors/Gastroenterologist')} className={`doctor-speciality ${speciality === 'Gastroenterologist' ? "bg-indigo-100 text-black" : ""}`}>Gastroenterologist</p>
         </div>
+
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-5 gap-y-6 px-3 sm:px-0'>
           {
             filterDoc.map((item, index) => (
-              <div onClick={() => navigate(`/appointement/${item._id}`)}
+              <div onClick={() => navigate(`/ appointement / ${item._id}`)}
                 key={index}
                 className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer 
                  hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-lg bg-white"

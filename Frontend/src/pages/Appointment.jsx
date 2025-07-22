@@ -6,7 +6,7 @@ import { assets } from '../assets/assets_frontend/assets';
 const Appointment = () => {
   const { docId } = useParams();
   const { doctors, currencySymbol } = useContext(AppContext);
-const daysOfWeek=["SUN","MON","TUE","WED","THU","FRI","SAT"]
+  const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
   const [docInfo, setDocInfo] = useState(null);
   const [docSlots, setDocSlots] = useState([]);
   const [slotIndex, setSlotIndex] = useState(0);
@@ -90,6 +90,15 @@ const daysOfWeek=["SUN","MON","TUE","WED","THU","FRI","SAT"]
             <p className='text-sm text-gray-500 max-w-[700px] mt-1'>{docInfo.about}</p>
           </div>
           <p className='text-gray-500 font-medium mt-4'>Appointment fee: <span className='text-gray-600'>{currencySymbol}{docInfo.fees}</span></p>
+        </div>
+      </div>
+      {/* ------Booking slots------ */}
+      <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
+        <p>Booking slots</p>
+        <div>
+{
+  
+}
         </div>
       </div>
     </div>

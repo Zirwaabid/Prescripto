@@ -34,9 +34,13 @@ const Appointment = () => {
 
       // setting hours 
       if (today.getDate() === currentDate.getDate()) {
-        currentDate.setHours(currentDate.setHours() > 10 ? currentDate.getHours() + 1 : 10)
-        currentDate.setMinutes(currentDate.setMinutes() > 30 ? 30 : 0)
+        let currentHour = today.getHours();
+        let currentMinute = today.getMinutes();
+
+        currentDate.setHours(currentHour >= 20 ? 21 : currentHour + 1); // prevent exceeding 21
+        currentDate.setMinutes(currentMinute > 30 ? 0 : 30);
       }
+
       else {
         currentDate.setHours(10)
         currentDate.setMinutes(0)
@@ -92,13 +96,19 @@ const Appointment = () => {
           <p className='text-gray-500 font-medium mt-4'>Appointment fee: <span className='text-gray-600'>{currencySymbol}{docInfo.fees}</span></p>
         </div>
       </div>
+
       {/* ------Booking slots------ */}
       <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
         <p>Booking slots</p>
-        <div>
-{
-  
-}
+        <div className='flex gap-3 items-center w-full overflow-x-scroll mt-4'>
+          {
+            docSlots.length && docSlots.map((item, index) => (
+              <div key={index}>
+                <p>{item[0] && daysOfWeek[item[0].dateTime.getDay()]}</p>
+                <p>{item[0] && item[0].dateTime.getDate()}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>

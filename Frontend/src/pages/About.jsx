@@ -21,17 +21,17 @@ const About = () => {
       </div>
 
       <div className='flex flex-col md:flex-row mb-20'>
-        <div className='border px-10 md:px-16 py-8 sm:py-16'>
+        <div className='about-hover'>
           <b>Efficiency</b>
           <p>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
         </div>
 
-        <div>
+        <div className='about-hover'>
           <b>Convenience:</b>
           <p>Access to a network of trusted healthcare professionals in your area.</p>
         </div>
 
-        <div>
+        <div className='about-hover'>
           <b>Personalization</b>
           <p>Tailored recommendations and reminders to help you stay on top of your health.</p>
         </div>
